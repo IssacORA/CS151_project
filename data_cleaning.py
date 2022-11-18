@@ -17,7 +17,7 @@ def load_variavle(filename):
     return r
 
 # read data
-path = "./files/Allegations.xlxs"
+path = "./files/allegations.xlxs"
 # Allegations_raw = pd.read_excel(path,sheet_name=["Allegations"])["Allegations"]
 Police_Witnesses_raw = pd.read_excel(path,sheet_name=["Police_Witnesses"])["Police_Witnesses"]
 Complaining_Witnesses_raw = pd.read_excel(path,sheet_name=["Complaining_Witnesses"])["Complaining_Witnesses"]
@@ -34,6 +34,6 @@ Police_Witnesses = Police_Witnesses[Police_Witnesses['Race']!='Unknown']
 Officer_Profile = Officer_Profile[Officer_Profile['Race']!='Unknown']
 
 
-save_variable(Officer_Profile , 'OP.txt')
-# save_variable(Police_Witnesses , 'PW.txt')
-# save_variable(Complaining_Witnesses , 'CW.txt')
+save_variable(Officer_Profile , './files/OP.txt')
+# save_variable(Police_Witnesses , './files/PW.txt')
+# save_variable(Complaining_Witnesses , './files/CW.txt')
